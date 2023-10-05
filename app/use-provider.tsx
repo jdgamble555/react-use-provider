@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, ReactNode, createContext, useContext, useState, type Context } from "react";
+import { FC, ReactNode, createContext, useContext, type Context } from "react";
 
 const _Map = <T,>() => new Map<string, T>();
 const Context = createContext(_Map());
@@ -29,8 +29,7 @@ export const useProvider = <T,>(key: string, initialValue?: T) => {
         const Context = createContext<T>(initialValue);
         provider.value = Context;
     }
-    const context = useContext(provider.value);
-    return context;
+    return useContext(provider.value);
 };
 
 
