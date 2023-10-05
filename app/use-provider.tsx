@@ -33,23 +33,6 @@ export const useProvider = <T,>(key: string, initialValue?: T) => {
     return context;
 };
 
-// Shared state helper, uses "value" instead of functions
-export type ReturnValueState<T> = ReturnType<typeof useValueState<T>>;
-
-export const useValueState = <T,>(initialValue: T) => {
-    const [state, setState] = useState(initialValue);
-    return {
-        get value() { return state },
-        set value(v: T) { setState(v) }
-    };
-}
-
-export const useSharedState = <T,>(key: string, initialValue?: T) => {
-
-
-    const state = useValueState(initialValue);
-    return useProvider(key, state);
-}
 
 
 

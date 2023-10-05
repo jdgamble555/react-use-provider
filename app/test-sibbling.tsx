@@ -1,15 +1,14 @@
 'use client';
 
-import { ReturnValueState, useProvider } from "./use-provider";
+import { useState } from "react";
+import { useProvider } from "./use-provider";
 
 
 export default function TestSibbling() {
 
-    const counter = useProvider<ReturnValueState<number>>('count');
+    const [count] = useProvider<ReturnType<typeof useState<number>>>('count');
 
     return (
-        <>
-            <p>Sibbling: {counter.value}</p>
-        </>
+        <p>Sibbling: {count}</p>
     )
 }

@@ -1,15 +1,14 @@
 'use client';
 
-import { ReturnValueState, useProvider } from "./use-provider";
+import { useState } from "react";
+import { useProvider } from "./use-provider";
 
 
 export default function TestGrandChild() {
 
-    const counter = useProvider<ReturnValueState<number>>('count');
+    const [count] = useProvider<ReturnType<typeof useState<number>>>('count');
 
     return (
-        <>
-            <p>Grand Child: {counter.value}</p>
-        </>
+        <p>Grand Child: {count}</p>
     )
 }
