@@ -3,14 +3,11 @@
 import { useState } from "react";
 import TestChild from "./test-child";
 import TestSibbling from "./test-sibbling";
-import { useProvider } from "./use-provider";
+import { useProvider, useSharedState } from "./use-provider";
 
 export default function Test() {
 
-    const state = useState(0);
-    const [_, setCount] = state;
-
-    useProvider('count', state);
+    const [_, setCount] = useSharedState('count', 0);
 
     return (
         <>
