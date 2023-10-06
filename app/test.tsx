@@ -1,9 +1,8 @@
 'use client'
 
-import { useState } from "react";
 import TestChild from "./test-child";
 import TestSibbling from "./test-sibbling";
-import { useProvider, useSharedState } from "./use-provider";
+import { useSharedState } from "./use-provider";
 
 export default function Test() {
 

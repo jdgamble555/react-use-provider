@@ -1,13 +1,12 @@
 'use client';
 
-import { useState } from "react";
 import TestGrandChild from "./test-grand-child";
-import { useProvider } from "./use-provider";
+import { useSharedState } from "./use-provider";
 
 
 export default function TestChild() {
 
-    const [count] = useProvider<ReturnType<typeof useState<number>>>('count');
+    const [count] = useSharedState<number>('count');
 
     return (
         <>
