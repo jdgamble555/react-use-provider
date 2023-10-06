@@ -7,6 +7,6 @@ export default function TestSibbling() {
     const [count] = useSharedState<number>('count');
 
     return (
-        <p>Sibbling: {count}</p>
+        <p>Sibling: {count}</p>
     )
 }

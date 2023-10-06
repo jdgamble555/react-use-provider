@@ -37,7 +37,6 @@ export const useProvider = <T,>(key: string, initialValue?: T) => {
     return useContext(provider.value);
 };
 
-
 export const useSharedState = <T,>(key: string, initialValue?: T) => {
     let state = undefined;
     if (initialValue !== undefined) {
