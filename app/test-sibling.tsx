@@ -2,7 +2,7 @@
 
 import { useSharedState } from "./use-provider";
 
-export default function TestSibbling() {
+export default function TestSibling() {
 
     const [count] = useSharedState<number>('count');
 

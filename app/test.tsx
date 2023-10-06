@@ -1,7 +1,7 @@
 'use client'
 
 import TestChild from "./test-child";
-import TestSibbling from "./test-sibbling";
+import TestSibling from "./test-sibling";
 import { useSharedState } from "./use-provider";
 
 export default function Test() {
@@ -11,7 +11,7 @@ export default function Test() {
     return (
         <>
             <TestChild />
-            <TestSibbling />
+            <TestSibling />
             <button className="border-2 mt-2 p-2 bg-black text-white" type="button" onClick={() => setCount(prev => prev + 1)}>
                 Increment
             </button>
